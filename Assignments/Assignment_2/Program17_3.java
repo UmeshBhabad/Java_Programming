@@ -1,9 +1,9 @@
-// Write a program to find the sum of digits of a number.
+// Write a program to find the maximum of two numbers.
 
 ///////////////////////////////////////////////////////////////////////////////////
 //
-// Function Name: sumOfDigits
-// Description:   Used to find the sum of digits of a number.
+// Function Name: findMax
+// Description:   Used to find the maximum of two numbers.
 // Input:         Integer
 // Output:        Integer
 // Author:        Umesh Shivaji Bhabad
@@ -14,27 +14,25 @@
 
 class Logic
 {
-    void sumOfDigits(int iNo)
+    void findMax(int iNo1, int iNo2)
     {
-        int iDigit = 0, iSum = 0;
-        
-        while(iNo != 0)
+        if( iNo1 > iNo2)
         {
-            iDigit = iNo % 10;
-            iNo /= 10;
-
-            iSum += iDigit;
+            System.out.println(iNo1);
+        }
+        else
+        {
+            System.out.println(iNo2);
         }
 
-        System.out.println(iSum);
     }
 }
 
-class Program17_1
+class Program17_3
 {
     public static void main(String args[])
     {
         Logic obj =new Logic();
-        obj.sumOfDigits(1234);
+        obj.findMax(20, 15);
     }
 }

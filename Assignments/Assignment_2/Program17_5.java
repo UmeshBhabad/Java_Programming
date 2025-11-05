@@ -1,9 +1,9 @@
-// Write a program to find the sum of digits of a number.
+// Write a program to print the multiplication table of a number.
 
 ///////////////////////////////////////////////////////////////////////////////////
 //
-// Function Name: sumOfDigits
-// Description:   Used to find the sum of digits of a number.
+// Function Name: printTable
+// Description:   Used to print the multiplication table of a number.
 // Input:         Integer
 // Output:        Integer
 // Author:        Umesh Shivaji Bhabad
@@ -14,27 +14,22 @@
 
 class Logic
 {
-    void sumOfDigits(int iNo)
+    void printTable(int iNo)
     {
-        int iDigit = 0, iSum = 0;
-        
-        while(iNo != 0)
+        int iCnt = 0;
+
+        for(iCnt = 1; iCnt <= 10; iCnt++)
         {
-            iDigit = iNo % 10;
-            iNo /= 10;
-
-            iSum += iDigit;
+            System.out.println(iNo * iCnt);
         }
-
-        System.out.println(iSum);
     }
 }
 
-class Program17_1
+class Program17_5
 {
     public static void main(String args[])
     {
         Logic obj =new Logic();
-        obj.sumOfDigits(1234);
+        obj.printTable(5);
     }
 }
