@@ -2,8 +2,8 @@
 
 ///////////////////////////////////////////////////////////////////////////////////
 //
-// Function Name: printDigits
-// Description:   used to print each digits of a number separately.
+// Function Name: calculatePower
+// Description:   used to calculate the power of a number.
 // Input:         Integer
 // Output:        Integer
 // Author:        Umesh Shivaji Bhabad

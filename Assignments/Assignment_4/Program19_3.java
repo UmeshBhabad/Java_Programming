@@ -2,7 +2,7 @@
 
 ///////////////////////////////////////////////////////////////////////////////////
 //
-// Function Name: displayGrade
+// Function Name: checkDivisible
 // Description:   used to check whether a number is divisible by 5 and 11 or not.
 // Input:         Integer
 // Output:        String
