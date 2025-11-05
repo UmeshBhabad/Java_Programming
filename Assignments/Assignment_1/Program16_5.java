@@ -2,8 +2,8 @@
 
 ///////////////////////////////////////////////////////////////////////////////////
 //
-// Function Name: reverseNumber
-// Description:   Used to find reverse a number.
+// Function Name: countDigits
+// Description:   Used to count number of digits in a given number.
 // Input:         Integer
 // Output:        Integer
 // Author:        Umesh Shivaji Bhabad
