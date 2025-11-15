@@ -4,12 +4,12 @@ import java.util.*;
 
 class Digits
 {
-    public int  DisplayDigitsRev(int iNo)
+    public int  DisplayDigitsRev(int iNo)                           // Function Defination
     {
-        int iDigit = 0;
+        int iDigit = 0;                                             // Local Variables
         int iSumDigits = 0;
 
-        while(iNo != 0)
+        while(iNo != 0)                                             // Business Logic
         {
             iDigit = iNo % 10;
             iNo /= 10;
@@ -22,19 +22,19 @@ class Digits
 
 class program91
 {
-    public static void main(String args[])
+    public static void main(String args[])                          // Main Method
     {
-        int iValue = 0;
+        int iValue = 0;                                             // Local Variable
         int iRet = 0;
 
-        Scanner sobj=new Scanner(System.in);
+        Scanner sobj=new Scanner(System.in);                        // Scanner Object
 
-        System.out.println("Enter the Number");
+        System.out.println("Enter the Number");                     // Input
         iValue = sobj.nextInt();
 
         Digits dobj = new Digits();                                 // Creating object of class Number
 
-        iRet = dobj.DisplayDigitsRev(iValue);                     // Function call
+        iRet = dobj.DisplayDigitsRev(iValue);                       // Function call
 
         System.out.println("The sum of digits is "+iRet);           // Display Output
 
@@ -42,6 +42,6 @@ class program91
         sobj = null;
         dobj = null;
 
-        System.gc();
+        System.gc();                                                // Garbage Collector
     }
 }

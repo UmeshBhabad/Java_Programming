@@ -4,13 +4,12 @@ import java.util.*;
 
 class Number
 {
-    public int CalculateFactorial(int iNo)
+    public int CalculateFactorial(int iNo)                          // Function Defination 
     {
-        int iCnt = 0;
-
+        int iCnt = 0;                                               // Local Variables
         int iFact = 1;
 
-        for(iCnt = 1; iCnt <= iNo; iCnt++)
+        for(iCnt = 1; iCnt <= iNo; iCnt++)                          // Business Logic
         {
             iFact *= iCnt;
         }                     
@@ -21,14 +20,14 @@ class Number
 
 class program86
 {
-    public static void main(String args[])
+    public static void main(String args[])                          // Main Method
     {
-        int iValue = 0;
+        int iValue = 0;                                             // Local Variables
         int iRet = 0;
 
-        Scanner sobj=new Scanner(System.in);
+        Scanner sobj = new Scanner(System.in);                      // Creating Scanner object
 
-        System.out.println("Enter the Number");
+        System.out.println("Enter the Number");                     // Input
         iValue = sobj.nextInt();
 
         Number nobj = new Number();                                 // Creating object of class Number
@@ -41,6 +40,6 @@ class program86
         sobj = null;
         nobj = null;
 
-        System.gc();
+        System.gc();                                                // Garbage Collector
     }
 }

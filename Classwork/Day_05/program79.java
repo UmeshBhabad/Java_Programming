@@ -1,17 +1,19 @@
+// // Program to check whether the given Number is Perfect or not.(without Updater)
+
 import java.util.*;
 
 class Number
 {
-    public boolean  CheckPerfect(int iNo)
+    public boolean CheckPerfect(int iNo)                           // Function Defination
     {
-        int iCnt = 0;
+        int iCnt = 0;                                               // Local Variables
         int iSum = 0;
         
-        for(iCnt = 1; iCnt <= iNo / 2; iCnt++)
+        for(iCnt = 1; iCnt <= iNo / 2; iCnt++)                      // Iteration
         {
-            if(iNo % iCnt == 0)
+            if(iNo % iCnt == 0)                                     // Condition
             {
-                iSum += iCnt;
+                iSum += iCnt;                                       // Business Logic
             }
         }
 
@@ -30,19 +32,19 @@ class program79
 {
     public static void main(String args[])
     {
-        int iValue = 0;
+        int iValue = 0;                                             // Local Variables
         boolean bRet = false;
 
-        Scanner sobj=new Scanner(System.in);
+        Scanner sobj = new Scanner(System.in);                      // Creating Scanner Object
 
         System.out.println("Enter the Number");
         iValue = sobj.nextInt();
 
-        Number nobj = new Number();                     // Creating object of class Number
+        Number nobj = new Number();                                 // Creating object of class Number
 
-        bRet = nobj.CheckPerfect(iValue);                    // Function call
+        bRet = nobj.CheckPerfect(iValue);                           // Function call
 
-        if(bRet == true)
+        if(bRet == true)                                            // Display Output
         {
             System.out.println(iValue+" is Perfect Number");
         }
@@ -56,6 +58,6 @@ class program79
         sobj = null;
         nobj = null;
 
-        System.gc();
+        System.gc();                                                // Calling Garbage Collector
     }
 }

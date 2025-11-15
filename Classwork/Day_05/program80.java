@@ -1,10 +1,12 @@
+// Program to check whether the given Number is Perfect or not.(without Updater)
+
 import java.util.*;
 
 class Number
 {
-    public boolean CheckPerfect(int iNo)
+    public boolean CheckPerfect(int iNo)                                    // Function Defination
     {
-        int iCnt = 0;
+        int iCnt = 0;                                                       // Local Variables
         int iSum = 0;
         
         for(iCnt = 1; iCnt <= iNo / 2; iCnt++)
@@ -39,9 +41,9 @@ class program80
         System.out.println("Enter the Number");
         iValue = sobj.nextInt();
 
-        Number nobj = new Number();                     // Creating object of class Number
+        Number nobj = new Number();                                         // Creating object of class Number
 
-        bRet = nobj.CheckPerfect(iValue);                    // Function call
+        bRet = nobj.CheckPerfect(iValue);                                   // Function call
 
         if(bRet == true)
         {

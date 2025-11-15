@@ -1,21 +1,22 @@
-// Accept input from user and find factorial of the given number.
+// Accept input from user and find factorial of the given number.(with Updater)
+
+// Cannot find factorial for large numbers
 
 import java.util.*;
 
 class Number
 {
-    public int CalculateFactorial(int iNo)
+    public int CalculateFactorial(int iNo)                              // Function Defination
     {
-        int iCnt = 0;
-
+        int iCnt = 0;                                                   // Local Variables
         int iFact = 1;
 
-        if(iNo < 0)
+        if(iNo < 0)                                                     // Updater
         {
             iNo = -iNo;
         }
 
-        for(iCnt = 1; iCnt <= iNo; iCnt++)
+        for(iCnt = 1; iCnt <= iNo; iCnt++)                              // Business Logic
         {
             iFact *= iCnt;
         }                     
@@ -26,26 +27,26 @@ class Number
 
 class program87
 {
-    public static void main(String args[])
+    public static void main(String args[])                              // Main Method
     {
-        int iValue = 0;
+        int iValue = 0;                                                 // Local Variables
         int iRet = 0;
 
-        Scanner sobj=new Scanner(System.in);
+        Scanner sobj=new Scanner(System.in);                            // Creating Scanner object
 
-        System.out.println("Enter the Number");
+        System.out.println("Enter the Number");                         // Input
         iValue = sobj.nextInt();
 
-        Number nobj = new Number();                                 // Creating object of class Number
+        Number nobj = new Number();                                     // Creating object of class Number
 
-        iRet = nobj.CalculateFactorial(iValue);                     // Function call
+        iRet = nobj.CalculateFactorial(iValue);                         // Function call
 
-        System.out.println("The factorial of "+iValue+" is "+iRet);
+        System.out.println("The factorial of "+iValue+" is "+iRet);     // Output
         
         // Important
         sobj = null;
         nobj = null;
 
-        System.gc();
+        System.gc();                                                    // Garbage Collector
     }
 }

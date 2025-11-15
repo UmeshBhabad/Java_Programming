@@ -1,12 +1,12 @@
 import java.util.*;
 
-class Number
+class Number                                            // Good Programming Practice
 {
-    public void DisplayFactors(int iNo)
+    public void DisplayFactors(int iNo)                 // Function defination
     {
-        int iCnt = 0;
+        int iCnt = 0;                                   // Loop Counter
         
-        for(iCnt = 1; iCnt <= iNo / 2; iCnt++)
+        for(iCnt = 1; iCnt <= iNo / 2; iCnt++)          // Business Logic
         {
             if(iNo % iCnt == 0)
             {
@@ -18,19 +18,17 @@ class Number
 
 class program77
 {
-    public static void main(String args[])
+    public static void main(String args[])              // Main Method
     {
-        int iValue = 0;
+        int iValue = 0;                                 // Local Variable
 
-        Scanner sobj=new Scanner(System.in);
+        Scanner sobj=new Scanner(System.in);            // Creating Scanner object
 
-        System.out.println("Enter the Number");
+        System.out.println("Enter the Number");         // Accepting input from user
         iValue = sobj.nextInt();
 
         Number nobj = new Number();                     // Creating object of class Number
 
-        nobj.DisplayFactors(iValue);                    // Function call
-
-        
+        nobj.DisplayFactors(iValue);                    // Function call       
     }
 }

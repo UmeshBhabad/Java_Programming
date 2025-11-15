@@ -1,20 +1,22 @@
+// Program to check whether the given Number is Perfect or not.(Optimized)
+
 import java.util.*;
 
 class Number
 {
-    public boolean CheckPerfect(int iNo)
+    public boolean CheckPerfect(int iNo)                                        // Function Defination
     {
-        int iCnt = 0;
+        int iCnt = 0;                                                           // Local variables
         int iSum = 0;
         
-        if(iNo < 0)
+        if(iNo < 0)                                                             // Updater
         {
             iNo = -iNo;
         }
 
         // Reverse loop
 
-        for(iCnt = iNo / 2; (iCnt >= 1) && (iSum < iNo); iCnt--)
+        for(iCnt = iNo / 2; (iCnt >= 1) && (iSum < iNo); iCnt--)                // Business Logic
         {
             if(iNo % iCnt == 0)
             {
@@ -30,23 +32,23 @@ class Number
 
 class program85
 {
-    public static void main(String args[])
+    public static void main(String args[])                                      // Main Method
     {
-        int iValue = 0;
+        int iValue = 0;                                                         // Local Variables
         boolean bRet = false;
 
-        Scanner sobj=new Scanner(System.in);
+        Scanner sobj = new Scanner(System.in);                                  // Creating Scanner object
 
-        System.out.println("Enter the Number");
+        System.out.println("Enter the Number");                                 // Input
         iValue = sobj.nextInt();
 
-        Number nobj = new Number();                     // Creating object of class Number
+        Number nobj = new Number();                                             // Creating object of class Number
 
-        bRet = nobj.CheckPerfect(iValue);                    // Function call
+        bRet = nobj.CheckPerfect(iValue);                                       // Function call
 
-        if(bRet == true)
+        if(bRet == true)                                                        // Output
         {
-            System.out.println(iValue+" is a Perfect Number");
+            System.out.println(iValue+" is a Perfect Number");      
         }
         else
         {
@@ -57,6 +59,6 @@ class program85
         sobj = null;
         nobj = null;
 
-        System.gc();
+        System.gc();                                                            // Garbage Collector
     }
 }

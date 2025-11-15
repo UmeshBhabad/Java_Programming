@@ -1,18 +1,20 @@
+// Program to check whether the given Number is Perfect or not.(Optimized)
+
 import java.util.*;
 
 class Number
 {
-    public boolean CheckPerfect(int iNo)
+    public boolean CheckPerfect(int iNo)                                                    // Function defination
     {
-        int iCnt = 0;
+        int iCnt = 0;                                                                       // Local Variables
         int iSum = 0;
         
-        if(iNo < 0)
+        if(iNo < 0)                                                                         // Updater
         {
             iNo = -iNo;
         }
-                                                // Change
-        for(iCnt = 1; (iCnt <= iNo / 2) && (iSum < iNo); iCnt++)
+                                            // Change
+        for(iCnt = 1; (iCnt <= iNo / 2) && (iSum < iNo); iCnt++)                            // Business Logic
         {
             if(iNo % iCnt == 0)
             {
@@ -28,21 +30,21 @@ class Number
 
 class program84
 {
-    public static void main(String args[])
+    public static void main(String args[])                                                  // Main Method
     {
-        int iValue = 0;
+        int iValue = 0;                                                                     // Local Variables
         boolean bRet = false;
 
-        Scanner sobj=new Scanner(System.in);
+        Scanner sobj = new Scanner(System.in);                                              // Creating Scanner object
 
-        System.out.println("Enter the Number");
+        System.out.println("Enter the Number");                                             // Input
         iValue = sobj.nextInt();
 
-        Number nobj = new Number();                     // Creating object of class Number
+        Number nobj = new Number();                                                         // Creating object of class Number
 
-        bRet = nobj.CheckPerfect(iValue);                    // Function call
+        bRet = nobj.CheckPerfect(iValue);                                                   // Function call
 
-        if(bRet == true)
+        if(bRet == true)                                                                    // Output
         {
             System.out.println(iValue+" is a Perfect Number");
         }
@@ -55,6 +57,6 @@ class program84
         sobj = null;
         nobj = null;
 
-        System.gc();
+        System.gc();                                                                        // Garbage Collector
     }
 }

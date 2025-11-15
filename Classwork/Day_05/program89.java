@@ -4,20 +4,19 @@ import java.util.*;
 
 class Number
 {
-    public long  CalculateFactorial(int iNo)
+    public long  CalculateFactorial(int iNo)                            // Function Defination
     {
-        int iCnt = 0;
-
+        int iCnt = 0;                                                   // Local Variable
         long lFact = 1;
 
-        if(iNo < 0)
+        if(iNo < 0)                                                     // Updator
         {
             iNo = -iNo;
         }
 
         iCnt = 1;
 
-        while(iCnt <= iNo)                                  // Change
+        while(iCnt <= iNo)                                              // using while loop
         {
             lFact *= iCnt;
             iCnt++;
@@ -29,26 +28,26 @@ class Number
 
 class program89
 {
-    public static void main(String args[])
+    public static void main(String args[])                              // Main Method
     {
         int iValue = 0;
-        long lRet = 0;                                              // Important
+        long lRet = 0;                                                  // Important
 
-        Scanner sobj=new Scanner(System.in);
+        Scanner sobj=new Scanner(System.in);                            // Scanner Object
 
-        System.out.println("Enter the Number");
+        System.out.println("Enter the Number");                         // Input
         iValue = sobj.nextInt();
 
-        Number nobj = new Number();                                 // Creating object of class Number
+        Number nobj = new Number();                                     // Creating object of class Number
 
-        lRet = nobj.CalculateFactorial(iValue);                     // Function call
+        lRet = nobj.CalculateFactorial(iValue);                         // Function call
 
-        System.out.println("The factorial of "+iValue+" is "+lRet);
+        System.out.println("The factorial of "+iValue+" is "+lRet);     // Output
         
         // Important
         sobj = null;
         nobj = null;
 
-        System.gc();
+        System.gc();                                                    // Garbage Collector
     }
 }
