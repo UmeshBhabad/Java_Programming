@@ -1,14 +1,16 @@
-// Dynamic Array
+// Dynamic Array declaration, Initialization and Displaying its elements.
 
 import java.util.*;
 
+// Logic class
+
 class Arrayx
 {
-    void Display(int Brr[])
+    void Display(int Brr[])                                     // Function Defination
     {
-        int iCnt = 0;
+        int iCnt = 0;                                           // Loop Counter
 
-        for(iCnt = 0; iCnt < Brr.length; iCnt++)
+        for(iCnt = 0; iCnt < Brr.length; iCnt++)                // Business Logic
         {
             System.out.println(Brr[iCnt]);
         }
@@ -17,20 +19,19 @@ class Arrayx
 
 class program100
 {
-    public static void main(String args[])
+    public static void main(String args[])                      // main method
     {
-        Scanner sobj = new Scanner(System.in);
+        Scanner sobj = new Scanner(System.in);                  // Scanner Object
 
-        int iSize = 0;
+        int iSize = 0;                                          // Local Variables
+        int iCnt = 0;
     
-        System.out.println("Enter the size of an array : ");
+        System.out.println("Enter the size of an array : ");    // Accepting array size
         iSize = sobj.nextInt();
 
-        int Arr[] = new int[iSize];
+        int Arr[] = new int[iSize];                             // Array declaration, Memory Allocation
 
-        System.out.println("Enter the Elements");
-        
-        int iCnt = 0;
+        System.out.println("Enter the Elements");               // Accepting array elements
 
         for(iCnt = 0; iCnt < Arr.length; iCnt++)
         {
@@ -38,9 +39,9 @@ class program100
         }
         
 
-        Arrayx aobj = new Arrayx();
+        Arrayx aobj = new Arrayx();                             // Logic class object
 
-        aobj.Display(Arr);
+        aobj.Display(Arr);                                      // Logic-Function call
 
         // Important
 
@@ -48,6 +49,6 @@ class program100
         Arr = null;
         sobj = null;
 
-        System.gc();
+        System.gc();                                            // Garbage Collector call
     }
 }

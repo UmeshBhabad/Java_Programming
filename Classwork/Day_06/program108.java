@@ -1,27 +1,30 @@
-// Accept N numbers from user and find the average of them.
+// OOP Design: Accept N numbers from user and find the average of them.
 
 import java.util.*;
 
+// Logic Class
+
 class Arrayx
 {
-    private int Arr[];
-    private int iSize;
+    // Instance Variables
+    private int Arr[];                                              // Array Declaration
+    private int iSize;                                              // Array size
 
-    public Arrayx(int iNo)
+    public Arrayx(int iNo)                                          // Parameterized Constructor
     {
         System.out.println("Inside Constructor");
         
-        iSize = iNo;
-        Arr = new int[iSize];
+        iSize = iNo;                                                // Assignment
+        Arr = new int[iSize];                                       // Array Instantation, Memory allocation
     }
 
-    public void Accept()
+    public void Accept()                                            // Function to accept array elements
     {
-        Scanner sobj = new Scanner(System.in);
+        Scanner sobj = new Scanner(System.in);                      // Scanner object
 
         int iCnt = 0;
 
-        System.out.println("Enter the Elements of an array :");
+        System.out.println("Enter the Elements of an array :");     // Accepting input from user
 
         for(iCnt = 0; iCnt < Arr.length; iCnt++)
         {
@@ -29,7 +32,7 @@ class Arrayx
         }
     }
 
-    public void Display()
+    public void Display()                                           // Function to display Array Elements
     {
         int iCnt = 0;
 
@@ -41,34 +44,38 @@ class Arrayx
         }
     }
 
-    public float Average()
+    // Business Logic
+    public float Average()                                          // Function to find average of array elements  
     {
-        int iCnt = 0, iSum = 0;
+        int iCnt = 0, iSum = 0;                                     // Local Variables
         
         for(iCnt = 0; iCnt < Arr.length; iCnt++)
         {
-            iSum += Arr[iCnt];
+            iSum += Arr[iCnt];                                      // Logic
         }
 
         return iSum / iSize;
     }
 }
 
+// Main Class
+
 class program108
 {
-    public static void main(String[] args)
+    public static void main(String[] args)                          // Main Method
     {
-        float fRet = 0.0f;
+        float fRet = 0.0f;                                          // Local Variable
         
-        Arrayx aobj1 = new Arrayx(5);
+        Arrayx aobj1 = new Arrayx(5);                               // Array Object Instantiation
 
+        // Function call
         aobj1.Accept();
         aobj1.Display();
         fRet = aobj1.Average();
 
-        Arrayx aobj2 = new Arrayx(7);               
+        Arrayx aobj2 = new Arrayx(7);                               // Object Instantiation               
 
-        System.out.println("The average of the elements is "+fRet);
+        System.out.println("The average of the elements is "+fRet); // Display Output
 
     }
 }

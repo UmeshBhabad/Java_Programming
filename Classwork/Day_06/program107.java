@@ -2,26 +2,28 @@
 
 import java.util.*;
 
+// Logic class
+
 class Arrayx
 {
-    private int Arr[];
+    private int Arr[];                                                  // Setting Instance Variables to private
     private int iSize;
 
-    public Arrayx(int iNo)
+    public Arrayx(int iNo)                                              // Parameterized construcor
     {
         System.out.println("Inside Constructor");
         
-        iSize = iNo;
-        Arr = new int[iSize];
+        iSize = iNo;                                                    // Assignment                     
+        Arr = new int[iSize];                                           // Array Declaration, memory allocation
     }
 
-    public void Accept()
+    public void Accept()                                                // Fucntion to accept array Elements
     {
-        Scanner sobj = new Scanner(System.in);
+        Scanner sobj = new Scanner(System.in);                          // Scanner Object
 
         int iCnt = 0;
 
-        System.out.println("Enter the Elements of an array :");
+        System.out.println("Enter the Elements of an array :");         // Accepting Input from user
 
         for(iCnt = 0; iCnt < Arr.length; iCnt++)
         {
@@ -29,11 +31,10 @@ class Arrayx
         }
     }
 
-    public void Display()
+    // Business Logic
+    public void Display()                                               // Function to display Array elements
     {
         int iCnt = 0;
-
-        System.out.println("Elements of the array are : ");
 
         for(iCnt = 0; iCnt < Arr.length; iCnt++)
         {
@@ -42,19 +43,23 @@ class Arrayx
     }
 }
 
+// Main Class
+
 class program107
 {
-    public static void main(String[] args)
+    public static void main(String[] args)                              // Main Method
     {
-        Arrayx aobj1 = new Arrayx(5);
-
+        Arrayx aobj1 = new Arrayx(5);                                   // Object Instantiation
+        
+        // Function Call
         aobj1.Accept();
         aobj1.Display();
 
-        Arrayx aobj2 = new Arrayx(7);               
+        Arrayx aobj2 = new Arrayx(7);                                   // Object Instantiation
 
+        // Function Call
         aobj2.Accept();
         aobj2.Display();
-
+        
     }
 }
