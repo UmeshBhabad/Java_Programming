@@ -9,32 +9,34 @@
 
 import java.util.*;
 
+// Logic Class
 class Pattern
 {
-    public void Display(int iNo)
+    public void Display(int iNo)                                // Function Defination
     {
-        int iCnt = 0;
+        int iCnt = 0;                                           // Local Variable
         char ch = 'z';
 
-        for(iCnt = 1; iCnt <= iNo; ch--, iCnt++)
+        for(iCnt = 1; iCnt <= iNo; ch--, iCnt++)                // Business Logic
         {
             System.out.printf("%c\t", ch);
         }
     }
 }
 
+// Main Method
 class program178
 {
-    public static void main(String []args)
+    public static void main(String []args)                      // Main Method
     {
-        Scanner sobj = new Scanner(System.in);
+        Scanner sobj = new Scanner(System.in);                  // Scanner Object Instantiation
 
-        int iValue = 0;
+        int iValue = 0;                                         // Local Variable
 
-        System.out.println("Enter the Frequency : ");
+        System.out.println("Enter the Frequency : ");           // Accept Frequency
         iValue = sobj.nextInt();
         
-        Pattern pobj = new Pattern();
-        pobj.Display(iValue);
+        Pattern pobj = new Pattern();                           // Object Instantiation
+        pobj.Display(iValue);                                   // Function call
     }
 }

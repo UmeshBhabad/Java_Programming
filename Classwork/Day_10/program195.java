@@ -3,56 +3,62 @@
     iRow : 4
     iCol : 4
 
-    *
-    *   *   
-    *   *   *
-    *   *   *   *
+    $
+    $   $   
+    $   $   $
+    $   $   $   $
     
-    Diagoanal Pattern
+    Diagonal Pattern
 */
 
 import java.util.*;
 
+// Logic class
 class Pattern
 {
     // Filter for square matrix
-    public void Display(int iRow, int iCol)
+    public void Display(int iRow, int iCol)                                         // Function Defination
     {
-        int i = 0, j = 0;
+        int i = 0, j = 0;                                                           // Local Variables
 
-        if(iRow != iCol)
+        if(iRow != iCol)                                                            // Check if Rows == Cols
         {
             System.out.println("Invalid Input");
             System.out.println("Row Number and Column Number should be same.");
             return;
         }
 
-        for(i = 1; i <= iRow; i++)
+        for(i = 1; i <= iRow; i++)                                                  // Business Logic
         {
-            for( j = 1; j <= i; j++)
+            
+            for( j = 1; j <= iCol; j++)
             {
-                System.out.printf("*\t");
+                if(j <= i)
+                {
+                    System.out.printf("$\t");
+                }
             }
             System.out.println();
         }
     }
 }
 
+// Main Class
 class program195
 {
-    public static void main(String []args)
+    public static void main(String []args)                                          // Main Method
     {
-        Scanner sobj = new Scanner(System.in);
+        Scanner sobj = new Scanner(System.in);                                      // Scanner Object
 
-        int iValue1 = 0, iValue2 = 0;
+        int iValue1 = 0, iValue2 = 0;                                               // Local Variable
 
-        System.out.println("Enter the Number of Rows : ");
+        System.out.println("Enter the Number of Rows : ");                          // Accept Rows
         iValue1 = sobj.nextInt();
 
-        System.out.println("Enter the Number of Columns : ");
+        System.out.println("Enter the Number of Columns : ");                       // Accept Columns
         iValue2 = sobj.nextInt();
         
-        Pattern pobj = new Pattern();
-        pobj.Display(iValue1, iValue2);
+        Pattern pobj = new Pattern();                                               // Object Instantiation
+        pobj.Display(iValue1, iValue2);                                             // Function call
     }
 }

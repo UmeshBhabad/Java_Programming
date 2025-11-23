@@ -11,13 +11,14 @@
 
 import java.util.*;
 
+// Logic class
 class Pattern
 {
-    public void Display(int iRow, int iCol)
+    public void Display(int iRow, int iCol)                         // Function difination
     {
-        int i = 0, j = 0;
+        int i = 0, j = 0;                                           // Local Variables
 
-        for(i = 1; i <= iRow; i++)
+        for(i = 1; i <= iRow; i++)                                  // Business Logic
         {
             for(j = 1; j <= iCol; j++)
             {
@@ -35,21 +36,22 @@ class Pattern
     }
 }
 
+// Main Class
 class program170
 {
-    public static void main(String []args)
+    public static void main(String []args)                          // Main Method
     {
-        Scanner sobj = new Scanner(System.in);
+        Scanner sobj = new Scanner(System.in);                      // Scanner Object Instantiation
 
-        int iValue1 = 0, iValue2 = 0;
+        int iValue1 = 0, iValue2 = 0;                               // Local Variable
 
-        System.out.println("Enter the Number of Rows : ");
+        System.out.println("Enter the Number of Rows : ");          // Accept Rows
         iValue1 = sobj.nextInt();
 
-        System.out.println("Enter the Number of Columns : ");
+        System.out.println("Enter the Number of Columns : ");       // Accept Columns
         iValue2 = sobj.nextInt();
         
-        Pattern pobj = new Pattern();
-        pobj.Display(iValue1, iValue2);
+        Pattern pobj = new Pattern();                               // Object Instantiation
+        pobj.Display(iValue1, iValue2);                             // Function call
     }
 }
