@@ -1,7 +1,7 @@
 # 🎨 Day 10 — Patterns, Nested Loops & Output Formatting in Java
 
 ### 📚 What I Learned Today
-
+    
 ---
 
 ## I. ⭐ Problems on Patterns  
